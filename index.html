@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head> 
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form to enter AnimalFriends</p>
+    <form method="post" action='test'>
+      <fieldset>
+        <label for="first-name">First Name: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="username">Username: <input id="username" name="username" required/></label>
+        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="photographer-account"><input id="photographer-account" type="radio" name="account-type" class="inline" /> Photographer Account</label>
+        <label for="viewer-account"><input id="viewer-account" type="radio" name="account-type" class="inline" /> Viewer Account</label>
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="link">terms and conditions</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Pick a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Put your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">How did you hear about us?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Forums</option>
+            <option value="2">Social media</option>
+            <option value="3">Friends</option>
+            <option value="4">Discord</option>
+            <option value="5">Other</option>
+          </select>
+        </label>
+        <label for="bio">Write a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="My favorite animal is..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
